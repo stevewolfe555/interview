@@ -1,0 +1,162 @@
+/* Less CSS Document */
+/* Will be auto compiled to CSS file on save */
+
+@import "bootstrap/bootstrap.less";
+
+@import "variables.less";
+@import "type.less";
+
+
+
+#site-container{
+	margin-top: 50px;
+}
+
+
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%!important; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		content: attr(data-th)": ";
+		font-weight: bold;
+	}
+	
+}
+
+.pagination {
+    clear: both;
+    padding: 0;
+}
+.pagination li {
+	display:inline;
+}
+.pagination a {
+    border: 1px solid #D5D5D5;
+    color: #666666;
+    font-size: 11px;
+    font-weight: bold;
+    height: 25px;
+    padding: 4px 8px;
+    text-decoration: none;
+  margin:2px;
+}
+.pagination a:hover, .pagination a:active {
+    background:#efefef;
+}
+.pagination span.current {
+    background-color: #687282;
+    border: 1px solid #D5D5D5;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    height: 25px;
+    padding: 4px 8px;
+    text-decoration: none;
+	margin:2px;
+}
+.pagination span.disabled {
+    border: 1px solid #EEEEEE;
+    color: #DDDDDD;
+    margin: 2px;
+    padding: 2px 5px;
+}
+
+
+/*
+** Notes styles**
+*/
+.notes{
+	overflow:auto;
+	height:200px;
+}
+.notes-date{
+	font-weight:bold;
+	color:blue;
+}
+.notes-name{
+	font-weight:bold;
+	color:green;
+}
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -80%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -80%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 80%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 80%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 80%; /* 6 columns */
+  }
+}

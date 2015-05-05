@@ -1,0 +1,161 @@
+/* Less CSS Document */
+/* Will be auto compiled to CSS file on save */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+
+
+.jumbotron{
+	padding:0;
+	margin:0;	
+}
+.cover-image{
+	background-color:#AFCDD9;
+	background-image:url('../img/SliderNoBackground.png');
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center; 
+	min-height: 300px;
+}
+.profile-image{
+	display:block;
+	max-width:250px; 
+	border-radius: 100%;
+	border: 8px solid @profileBorderColour;
+	margin: 0 auto;
+}
+.header-spacer{
+	margin-top:-120px;
+}
+
+.section-title{
+	background-color:@titleBackgroundColour;
+	display:block;
+	padding:10px;
+	margin:20px 0;
+}
+	h2.section-title{
+		font-weight:normal;
+		text-shadow:none;
+	}
+.thumb{
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center; 
+	min-height:300px;
+	display:inline-block;
+}	
+.printed-easy-icon {
+	background-image:url(../img/printed-easy/homepage-icon.png);
+}
+.aliunlimited-icon {
+	background-image:url(../img/aliunlimited/homepage-icon.png);
+}
+.myfibre-icon {
+	background-image:url(../img/myfibre/homepage-icon.png);
+}
+.icon{
+	width:50px;
+	height:50px;
+	display:inline-block;
+}
+	@media (min-width: 768px) {
+		.icon{
+			width:100px;
+			height:100px;
+		}
+	}
+.wordpress{
+	background-image:url(../img/icons/wordpress.png);
+	background-size:contain;
+}
+.jquery{
+	background-image:url(../img/icons/jquery.jpg);
+	background-size:contain;
+}
+.woocommerce{
+	background-image:url(../img/icons/wclogo.png);
+	background-size:contain;
+}
+.bootstrap{
+	background-image:url(../img/icons/bootstrap-logo.png);
+	background-size:contain;
+}
+.trustpilot{
+	background-image:url(../img/icons/Trustpilot_e-Hardware.jpg);
+	background-size:contain;
+}
+.footer{
+	background-color:#333;
+}
+	.footer p{
+		font-size:12px;
+		color:#FFF;
+		text-align:center;
+		padding:10px;
+	}
+
+.social-icons #services {
+  transform: translatez(0);
+  margin: 0 auto;		
+  text-align:center;
+}
+.social-icons ul {
+	padding:0 !important;
+}
+.social-icons #services li {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  margin: 5px;
+  list-style: none;
+}
+.social-icons #services li div {
+  width: 45px;
+  height: 45px;
+  color: #ccc;
+  font-size: 3.4em;
+  text-align: center;
+  line-height: 45px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+.social-icons #services li div:hover {
+  transform: rotate(360deg);
+  border-radius: 100px;
+}
+.social-icons #services li span {
+	display:none;
+}
+
+	@media (min-width: 1010px) {
+		.social-icons #services {
+		  float:right;  
+		}
+		.social-icons #services li span {
+		  width: 45px;
+		  height: 45px;
+		  display: block;
+		  padding: 15px 0px;
+		  color: #fff;
+		  font-family: 'Advent Pro', sans-serif;
+		  text-transform: uppercase;
+		  font-size: 1.2em;
+		  text-align: center;
+		}
+		.social-icons #services li {
+		  width: 65px;
+		  height: 65px;
+		}
+		.social-icons #services li div {
+		  width: 65px;
+		  height: 65px;
+		  line-height: 65px;
+		}
+		.social-icons #services li span {
+		  width: 65px;
+		  height: 65px;
+		}
+	}
+	
